@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import OpcrfLanding from '../../OpcrfLanding'
-import snsBackground from '../../../assets/Part-1-A-Curriculum-Teaching/SNS/SNS background.jpg'
+import snsBackground from '../../../assets/Part-1-A-Curriculum-Teaching/SNS/SNS Background.jpg'
 import './SNS.css'
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
