@@ -1,0 +1,121 @@
+.opcrf-workbook {
+	width: 100%;
+	min-height: calc(100vh - 76px);
+	box-sizing: border-box;
+	padding: 2.5rem clamp(1rem, 4vw, 3rem) 3rem;
+	color: #243447;
+	background: #f3f6f7;
+}
+
+.opcrf-workbook-header {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 1rem;
+	max-width: 1400px;
+	margin: 0 auto 1.5rem;
+	padding-bottom: 1.25rem;
+	border-bottom: 1px solid #dbe5e9;
+}
+
+.opcrf-workbook-kicker {
+	margin: 0 0 0.4rem;
+	color: #2f7d78;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.opcrf-workbook h1 {
+	margin: 0;
+	color: #173b4d;
+	font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.opcrf-workbook-header p:last-child {
+	margin: 0.5rem 0 0;
+	color: #647783;
+}
+
+.opcrf-workbook-header > span {
+	color: #647783;
+	font-size: 0.85rem;
+	white-space: nowrap;
+}
+
+.opcrf-sheet-tabs {
+	display: flex;
+	gap: 0.4rem;
+	max-width: 1400px;
+	margin: 0 auto;
+	overflow-x: auto;
+	border-bottom: 1px solid #b9cdd0;
+}
+
+.opcrf-sheet-tabs button {
+	border: 0;
+	border-bottom: 3px solid transparent;
+	padding: 0.7rem 1rem;
+	color: #506b75;
+	background: transparent;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.opcrf-sheet-tabs button:hover,
+.opcrf-sheet-tabs button.is-active {
+	border-bottom-color: #2f7d78;
+	color: #173b4d;
+}
+
+.opcrf-table-wrap {
+	max-width: 1400px;
+	margin: 1.25rem auto 0;
+	overflow: auto;
+	border: 1px solid #dbe5e9;
+	background: #fff;
+}
+
+.opcrf-table-wrap table {
+	min-width: 900px;
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.82rem;
+}
+
+.opcrf-table-wrap td {
+	min-width: 100px;
+	border: 1px solid #dbe5e9;
+	padding: 0.6rem 0.7rem;
+	vertical-align: top;
+	white-space: pre-wrap;
+}
+
+.opcrf-table-wrap tr:first-child td {
+	color: #fff;
+	background: #173b4d;
+	font-weight: 700;
+}
+
+.opcrf-table-wrap tr:nth-child(even) td {
+	background: #f7faf9;
+}
+
+.opcrf-workbook-status,
+.opcrf-workbook-note {
+	max-width: 1400px;
+	margin: 1.5rem auto;
+	color: #647783;
+}
+
+.opcrf-workbook-status.is-error {
+	color: #a33d35;
+}
+
+@media (max-width: 700px) {
+	.opcrf-workbook-header {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}

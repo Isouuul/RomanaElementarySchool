@@ -1,0 +1,104 @@
+.opcrf-landing {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 3rem;
+  color: #243447;
+}
+
+.opcrf-landing-header {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #dbe5e9;
+  padding-bottom: 1.75rem;
+}
+
+.opcrf-landing-header.has-background {
+  width: 100%;
+  min-height: min(520px, 55vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 3rem max(2rem, calc((100% - 1180px) / 2 + 2rem));
+  border: 0;
+  background-image: linear-gradient(90deg, rgba(7, 24, 54, 0.86) 0%, rgba(7, 24, 54, 0.38) 52%, rgba(7, 24, 54, 0.08) 100%), var(--opcrf-background-image);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.opcrf-landing-header.has-background .opcrf-landing-kicker,
+.opcrf-landing-header.has-background h1,
+.opcrf-landing-header.has-background > p:last-child {
+  position: relative;
+  max-width: 680px;
+  color: #fff;
+}
+
+.opcrf-landing-kicker {
+  margin: 0 0 0.5rem;
+  color: #2f7d78;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.opcrf-landing h1 {
+  margin: 0;
+  color: #173b4d;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+}
+
+.opcrf-landing-header > p:last-child {
+  margin: 0.75rem 0 0;
+  color: #647783;
+  font-size: 1.05rem;
+}
+
+.opcrf-landing-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 760px;
+  margin: 2rem auto 0;
+  border: 1px solid #dbe5e9;
+  padding: 1.5rem;
+  background: #fffdf8;
+}
+
+.opcrf-landing-badge {
+  flex-shrink: 0;
+  padding: 0.4rem 0.5rem;
+  color: #fff;
+  background: #d16b43;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.opcrf-landing-content h2 {
+  margin: 0;
+  color: #173b4d;
+  font-size: 1.15rem;
+}
+
+.opcrf-landing-content p {
+  margin: 0.5rem 0 0;
+  color: #647783;
+}
+
+@media (max-width: 700px) {
+  .opcrf-landing {
+    padding-bottom: 2rem;
+  }
+
+  .opcrf-landing-header.has-background {
+    min-height: 350px;
+    padding: 1.5rem;
+  }
+
+  .opcrf-landing-content {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}

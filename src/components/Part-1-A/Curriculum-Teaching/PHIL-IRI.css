@@ -1,0 +1,121 @@
+.phil-iri-viewer {
+	width: 100%;
+	margin-top: 2rem;
+	background: #e8edf0;
+}
+
+.phil-iri-viewer-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.25rem max(1rem, calc((100% - 1180px) / 2 + 1rem));
+	color: #173b4d;
+	background: #fffdf8;
+	border-top: 1px solid #dbe5e9;
+	border-bottom: 1px solid #dbe5e9;
+}
+
+.phil-iri-kicker {
+	margin: 0 0 0.35rem;
+	color: #2f7d78;
+	font-size: 0.75rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.phil-iri-viewer-heading h2 {
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.phil-iri-viewer-heading > span {
+	color: #647783;
+	font-size: 0.85rem;
+	white-space: nowrap;
+}
+
+.phil-iri-tabs {
+	display: flex;
+	justify-content: center;
+	gap: 0.25rem;
+	padding: 0 1rem;
+	background: #f8fafc;
+	border-bottom: 1px solid #dbe5e9;
+}
+
+.phil-iri-tab {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	min-height: 4.25rem;
+	padding: 0.75rem 1.25rem 0.65rem;
+	border: 0;
+	border-bottom: 3px solid transparent;
+	color: #173b4d;
+	background: transparent;
+	font-size: 0.95rem;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.phil-iri-tab:hover,
+.phil-iri-tab.is-active {
+	color: #006dff;
+}
+
+.phil-iri-tab.is-active {
+	border-bottom-color: #006dff;
+	font-weight: 600;
+}
+
+.phil-iri-tab-icon {
+	color: currentColor;
+	font-size: 1.1rem;
+}
+
+.phil-iri-viewer .react-pdf__Document {
+	display: grid;
+	gap: 1.5rem;
+	justify-items: center;
+	padding: 1.5rem 1rem;
+}
+
+.phil-iri-viewer .react-pdf__Page {
+	max-width: 100%;
+	overflow: hidden;
+	box-shadow: 0 3px 16px rgba(23, 59, 77, 0.18);
+}
+
+.phil-iri-viewer .react-pdf__Page canvas {
+	display: block;
+	max-width: 100%;
+	height: auto !important;
+}
+
+.phil-iri-status {
+	margin: 0;
+	padding: 2rem 1rem;
+	color: #647783;
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	.phil-iri-viewer-heading {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.phil-iri-tabs {
+		justify-content: flex-start;
+		overflow-x: auto;
+	}
+
+	.phil-iri-tab {
+		padding-right: 0.75rem;
+		padding-left: 0.75rem;
+		font-size: 0.82rem;
+		white-space: nowrap;
+	}
+}
