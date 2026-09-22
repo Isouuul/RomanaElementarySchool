@@ -60,7 +60,6 @@ const Navigationbar = ({ currentPage }) => {
         </span>
         <span className="brand-copy">
           <span className="brand-title">Romana Elementary School</span>
-          <span className="brand-subtitle">OPCRF Portal</span>
         </span>
       </a>
 
