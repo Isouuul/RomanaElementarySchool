@@ -33,7 +33,7 @@ const DIRECTORY_DATA = [
   { id: 3, name: 'Leny A. Nillos, PhD', role: 'Chief Education Supervisor - Curriculum and Implementation Division', category: 'execom', image: CIDImg, email: 'cid@deped.gov.ph' },
   { id: 4, name: 'Ronamae V. Reliquias', role: 'Chief Education Supervisor - Schools Governance and Operations Division', category: 'execom', image: SGODImg, email: 'sgod@deped.gov.ph' },
   { id: 5, name: 'Katherine B. Pambusan', role: 'Education Program Supervisor - Foster Supervisor', category: 'execom', image: KatherineImg, email: 'katherine.pambusan@deped.gov.ph' },
-  
+
   // Faculty
   { id: 6, name: 'Ritchie S. Alayon', role: 'Teaching Personnel', category: 'faculty', image: AlayonImg, email: 'alayon@school.edu.ph' },
   { id: 7, name: 'Cynthia P. Ayco', role: 'Teaching Personnel', category: 'faculty', image: AycoImg, email: 'ayco@school.edu.ph' },
@@ -45,7 +45,7 @@ const DIRECTORY_DATA = [
   { id: 13, name: 'Mary Lois L. Saude', role: 'Teaching Personnel', category: 'faculty', image: SaudeImg, email: 'saude@school.edu.ph' },
   { id: 14, name: 'Osano', role: 'Teaching Personnel', category: 'faculty', image: OsanoFacultyImg, email: 'osano@school.edu.ph' },
 
-  // Non-Teaching & Staff
+  // Non-Teaching & Staff (Welson Solomon ordered right after Jumbas)
   { id: 15, name: 'Bernalyn J. Deocampo', role: 'Kindergarten Substitute Teacher', category: 'staff', image: DeocampoImg, email: 'deocampo@school.edu.ph' },
   { id: 16, name: 'Reynold P. Jumbas', role: 'Factotum', category: 'staff', image: JumbasImg, email: 'jumbas@school.edu.ph' },
   { id: 19, name: 'MC Welson C. Solomon', role: 'Head Teacher III', category: 'staff', image: SolomonImg, email: 'solomon@school.edu.ph' },
@@ -71,6 +71,26 @@ const Directory = () => {
                           member.role.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesTab && matchesSearch;
   });
+
+  // Helper function to return members in correct display order per category group
+  const getGroupMembers = (groupId) => {
+    let groupMembers = filteredMembers.filter((member) => member.category === groupId);
+
+    if (activeTab === 'all') {
+      if (groupId === 'execom') {
+        // Append Welson right after ExeCom when viewing 'all'
+        const welson = filteredMembers.find((m) => m.id === 19);
+        if (welson && !groupMembers.some((m) => m.id === 19)) {
+          groupMembers = [...groupMembers, welson];
+        }
+      } else if (groupId === 'staff') {
+        // Exclude Welson from Support Staff section when 'all' is active
+        groupMembers = groupMembers.filter((m) => m.id !== 19);
+      }
+    }
+
+    return groupMembers;
+  };
 
   return (
     <section className="page-container">
@@ -106,7 +126,7 @@ const Directory = () => {
       {/* Directory Groups */}
       {filteredMembers.length > 0 ? (
         DIRECTORY_GROUPS.map((group) => {
-          const groupMembers = filteredMembers.filter((member) => member.category === group.id);
+          const groupMembers = getGroupMembers(group.id);
 
           if (groupMembers.length === 0) return null;
 

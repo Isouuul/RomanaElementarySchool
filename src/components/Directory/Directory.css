@@ -119,10 +119,11 @@
   border-color: var(--primary);
 }
 
-/* Grid Layout */
+/* Grid Layout Centered for 5 Columns */
 .directory-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 }
 
@@ -151,6 +152,8 @@
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  width: calc((100% - (1.5rem * 4)) / 5);
+  box-sizing: border-box;
 }
 
 .directory-card:hover {
@@ -232,15 +235,15 @@
 }
 
 .no-results {
-  grid-column: 1 / -1;
+  width: 100%;
   text-align: center;
   padding: 3rem 0;
   color: var(--text-muted);
 }
 
 @media (max-width: 640px) {
-  .directory-grid {
-    grid-template-columns: 1fr;
+  .directory-card {
+    width: 100%;
   }
 
   .directory-controls {
@@ -250,7 +253,7 @@
 }
 
 @media (min-width: 641px) and (max-width: 1050px) {
-  .directory-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .directory-card {
+    width: calc((100% - (1.5rem * 2)) / 3);
   }
 }
