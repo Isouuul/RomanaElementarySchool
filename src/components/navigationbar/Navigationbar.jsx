@@ -233,12 +233,12 @@ const Navigationbar = ({ currentPage }) => {
                 </button>
                 {openSubmenus.part1b && (
                   <ul className="submenu">
-                    <li><a href="#kra-1" onClick={closeNavigation}>KRA 1</a></li>
-                    <li><a href="#kra-2" onClick={closeNavigation}>KRA 2</a></li>
-                    <li><a href="#kra-3" onClick={closeNavigation}>KRA 3</a></li>
-                    <li><a href="#kra-4" onClick={closeNavigation}>KRA 4</a></li>
-                    <li><a href="#kra-5" onClick={closeNavigation}>KRA 5</a></li>
-                    <li><a href="#kra-6" onClick={closeNavigation}>KRA 6</a></li>
+<li><a href="#kra-1" onClick={closeNavigation}>KRA 1. CURRICULUM & TEACHING</a></li>
+<li><a href="#kra-2" onClick={closeNavigation}>KRA 2. LEARNING ENVIRONMENT</a></li>
+<li><a href="#kra-3" onClick={closeNavigation}>KRA 3. LEADERSHIP</a></li>
+<li><a href="#kra-4" onClick={closeNavigation}>KRA 4. GOVERNANCE & ACCOUNTABILITY</a></li>
+<li><a href="#kra-5" onClick={closeNavigation}>KRA 5. HUMAN RESOURCE AND TEAM DEVELOPMENT</a></li>
+<li><a href="#kra-6" onClick={closeNavigation}>KRA 6. FINANCE AND RESOURCE MANAGE & MOBILIZATION</a></li>
                   </ul>
                 )}
               </li>
