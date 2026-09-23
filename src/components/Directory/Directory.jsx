@@ -61,6 +61,13 @@ const DIRECTORY_GROUPS = [
   { id: 'staff', label: 'Support Staff' },
 ];
 
+const TAB_TITLES = {
+  all: 'Board Members',
+  execom: 'Executive Committee',
+  faculty: 'Teaching Faculty',
+  staff: 'Support Staff',
+};
+
 const Directory = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -123,6 +130,16 @@ const Directory = () => {
         </div>
       </div>
 
+      {/* Centered Dynamic Title based on active tab */}
+{filteredMembers.length > 0 && (
+  <h2 
+    className="directory-group-title" 
+    style={{ textAlign: 'center', fontSize: '2.25rem', fontWeight: 'bold' }}
+  >
+    {TAB_TITLES[activeTab]}
+  </h2>
+)}
+
       {/* Directory Groups */}
       {filteredMembers.length > 0 ? (
         DIRECTORY_GROUPS.map((group) => {
@@ -132,7 +149,6 @@ const Directory = () => {
 
           return (
             <section className="directory-group" key={group.id}>
-              {activeTab === 'all' && <h2 className="directory-group-title">{group.label}</h2>}
               <div className="directory-grid">
                 {groupMembers.map((member) => (
                   <article key={member.id} className={`directory-card ${member.category}`}>
