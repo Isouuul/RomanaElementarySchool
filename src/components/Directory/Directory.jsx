@@ -48,9 +48,9 @@ const DIRECTORY_DATA = [
   // Non-Teaching & Staff
   { id: 15, name: 'Bernalyn J. Deocampo', role: 'Kindergarten Substitute Teacher', category: 'staff', image: DeocampoImg, email: 'deocampo@school.edu.ph' },
   { id: 16, name: 'Reynold P. Jumbas', role: 'Factotum', category: 'staff', image: JumbasImg, email: 'jumbas@school.edu.ph' },
+  { id: 19, name: 'MC Welson C. Solomon', role: 'Head Teacher III', category: 'staff', image: SolomonImg, email: 'solomon@school.edu.ph' },
   { id: 17, name: 'Nathaniel B. Parreño', role: 'Administrative Officer II', category: 'staff', image: ParrenoImg, email: 'parreno@school.edu.ph' },
   { id: 18, name: 'Desiree O. Seballos', role: 'Grade 2 Substitute Teacher', category: 'staff', image: SeballosImg, email: 'seballos@school.edu.ph' },
-  { id: 19, name: 'MC Welson C. Solomon', role: 'Head Teacher III', category: 'staff', image: SolomonImg, email: 'solomon@school.edu.ph' },
   { id: 20, name: 'Marisa C. Valente', role: 'Contract of Service', category: 'staff', image: ValenteImg, email: 'valente@school.edu.ph' },
   { id: 21, name: 'Osano', role: 'Non-Teaching Personnel', category: 'staff', image: OsanoStaffImg, email: 'osano@school.edu.ph' },
 ];
