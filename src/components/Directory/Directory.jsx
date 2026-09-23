@@ -117,7 +117,7 @@ const Directory = () => {
 
         <div className="tab-filters">
           <button className={activeTab === 'all' ? 'active' : ''} onClick={() => setActiveTab('all')}>All</button>
-          <button className={activeTab === 'execom' ? 'active' : ''} onClick={() => setActiveTab('execom')}>Board & Execom</button>
+          <button className={activeTab === 'execom' ? 'active' : ''} onClick={() => setActiveTab('execom')}>Execom</button>
           <button className={activeTab === 'faculty' ? 'active' : ''} onClick={() => setActiveTab('faculty')}>Teaching Faculty</button>
           <button className={activeTab === 'staff' ? 'active' : ''} onClick={() => setActiveTab('staff')}>Support Staff</button>
         </div>
